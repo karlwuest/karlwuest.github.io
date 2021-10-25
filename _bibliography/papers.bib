@@ -6,7 +6,12 @@
     title={{Bitcontracts: Supporting Smart Contracts in Legacy Blockchains}},
     author={W{\"u}st, Karl and Diana, Loris and Kostiainen, Kari and Karame, Ghassan and Matetic, Sinisa and Capkun, Srdjan},
     booktitle={Network and Distributed System Security Symposium},
-    year={2021}
+    year={2021},
+    publication={https://doi.org/10.14722/ndss.2021.24294},
+    pdf={https://eprint.iacr.org/2019/857.pdf},
+    abstract={In this paper we propose Bitcontracts, a novel solution that enables secure and efficient execution of generic smart contracts on top of unmodified legacy cryptocurrencies like Bitcoin that do not support contracts natively. The starting point of our solution is an off-chain execution model, where the contract's issuers appoints a set of service providers to execute the contract's code. The contract's execution results are accepted if a quorum of service providers reports the same result and clients are free to choose which such contracts they trust and use. The main technical contribution of this paper is how to realize such a trust model securely and efficiently without modifying the underlying blockchain.
+
+We also identify a set of generic properties that a blockchain system must support so that expressive smart contracts can be added safely, and analyze popular existing blockchains based on these criteria.}
 }
 
 
@@ -15,7 +20,12 @@
     title={{ACE: Asynchronous and Concurrent Execution of Complex Smart Contracts}},
     author={W{\"u}st, Karl and Matetic, Sinisa and Egli, Silvan and Kostiainen, Kari and Capkun, Srdjan},
     booktitle={ACM SIGSAC Conference on Computer and Communications Security},
-    year={2020}
+    year={2020},
+    publication={https://doi.org/10.1145/3372297.3417243},
+    pdf={https://eprint.iacr.org/2019/835.pdf},
+    abstract={Smart contracts are programmable, decentralized and transparent financial applications. Because smart contract platforms typically support Turing-complete programming languages, such systems are often said to enable arbitrary applications. However, the current permissionless smart contract systems impose heavy restrictions on the types of computations that can be implemented. For example, the globally-replicated and sequential execution model of Ethereum requires low gas limits that make many computations infeasible.
+
+In this paper, we propose a novel system called ACE whose main goal is to enable more complex smart contracts on permissionless blockchains. ACE is based on an off-chain execution model where the contract issuers appoint a set of service providers to execute the contract code independent from the consensus layer. The primary advantage of ACE over previous solutions is that it allows one contract to safely call another contract that is executed by a different set of service providers. Thus, ACE is the first solution to enable off-chain execution of interactive smart contracts with flexible trust assumptions. Our evaluation shows that ACE enables several orders of magnitude more complex smart contracts than standard Ethereum.}
 }
 
 @inproceedings{mavroudis2020snappy,
@@ -23,15 +33,24 @@
     title={Snappy: Fast On-chain Payments with Practical Collaterals},
     author={Mavroudis, Vasilios and W{\"u}st, Karl and Dhar, Aritra and Kostiainen, Kari and Capkun, Srdjan},
     booktitle={Network and Distributed System Security Symposium},
-    year={2020}
+    year={2020},
+    publication={https://doi.org/10.14722/ndss.2020.24049},
+    pdf={https://arxiv.org/pdf/2001.01278.pdf},
+    abstract={Permissionless blockchains offer many advantages but also have significant limitations including high latency. This prevents their use in important scenarios such as retail payments, where merchants should approve payments fast. Prior works have attempted to mitigate this problem by moving transactions off the chain. However, such Layer-2 solutions have their own problems: payment channels require a separate deposit towards each merchant and thus significant locked-in funds from customers; payment hubs require very large operator deposits that depend on the number of customers; and side-chains require trusted validators.
+In this paper, we propose Snappy, a novel solution that enables recipients, like merchants, to safely accept fast payments. In Snappy, all payments are on the chain, while small customer collaterals and moderate merchant collaterals act as payment guarantees. Besides receiving payments, merchants also act as statekeepers who collectively track and approve incoming payments using majority voting. In case of a double-spending attack, the victim merchant can recover lost funds either from the collateral of the malicious customer or a colluding statekeeper (merchant). Snappy overcomes the main problems of previous solutions: a single customer collateral can be used to shop with many merchants; merchant collaterals are independent of the number of customers; and validators do not have to be trusted. Our Ethereum prototype shows that safe, fast (<2 seconds) and cheap payments are possible on existing blockchains.}
 }
 
 @inproceedings{matetic2019bite,
     abbr={USENIX},
-    title={{BITE: Bitcoin Lightweight Client Privacy using Trusted Execution.}},
+    title={{BITE: Bitcoin Lightweight Client Privacy using Trusted Execution}},
     author={Matetic, Sinisa and W{\"u}st, Karl and Schneider, Moritz and Kostiainen, Kari and Karame, Ghassan and Capkun, Srdjan},
     year={2019},
-    booktitle={{28th USENIX Security Symposium}}
+    booktitle={{28th USENIX Security Symposium}},
+    publication={https://www.usenix.org/system/files/sec19-matetic.pdf},
+    pdf={https://eprint.iacr.org/2018/803.pdf},
+    abstract={Blockchains offer attractive advantages over traditional payments such as the ability to operate without a trusted authority and increased user privacy. However, the verification of blockchain payments requires the user to download and process the entire chain which can be infeasible for resource-constrained devices like mobile phones. To address this problem, most major blockchain systems support so called lightweight clients that outsource most of the computational and storage burden to full blockchain nodes. However, such verification leaks critical information about clients’ transactions, thus defeating user privacy that is often considered one of the main goals of decentralized cryptocurrencies.
+
+In this paper, we propose a new approach to protect the privacy of light clients in Bitcoin. Our main idea is to leverage the trusted execution capabilities of commonly available SGX enclaves. We design and implement a system called BITE where enclaves on full nodes serve privacy-preserving requests from light clients. However, as we will show, naive processing of client requests from within SGX enclaves still leaks client’s addresses and transactions. BITE therefore integrates several private information retrieval and side-channel protection techniques at critical parts of the system. We show that BITE provides significantly improved privacy protection for light clients without compromising the performance of the assisting full nodes.}
 }
 
 @inproceedings{wuest2019prcash,
@@ -39,7 +58,10 @@
     title={{PRCash: Fast, Private and Regulated Transactions for Digital Currencies}},
     author={W{\"u}st, Karl and Kostiainen, Kari and Capkun, Vedran and Capkun, Srdjan},
     booktitle={International Conference on Financial Cryptography and Data Security},
-    year={2019}
+    year={2019},
+    publication={https://doi.org/10.1007/978-3-030-32101-7_11},
+    pdf={https://eprint.iacr.org/2018/412.pdf},
+    abstract={Fiat currency implemented as a blockchain can enable multiple benefits such as reduced cost compared to expensive handling of cash and better transparency for increased public trust. However, such deployments have conflicting requirements including fast payments, strong user privacy and regulatory oversight. None of the existing blockchain transaction techniques supports all of these three requirements. In this paper we design a new blockchain currency, called PRCash, that addresses the above challenge. The primary technical contribution of our work is a novel regulation mechanism for transactions that use cryptographic commitments. We enable regulation of spending limits using zero-knowledge proofs. PRCash is the first blockchain currency that provides fast payments, good level of user privacy and regulatory control at the same time.}
 }
 
 @inproceedings{wuest2019zlite,
@@ -47,7 +69,10 @@
     title={{ZLiTE: Lightweight Clients for Shielded Zcash Transactions using Trusted Execution}},
     author={W{\"u}st, Karl and Matetic, Sinisa and Schneider, Moritz and Miers, Ian and Kostiainen, Kari and Capkun, Srdjan},
     booktitle={International Conference on Financial Cryptography and Data Security},
-    year={2019}
+    year={2019},
+    publication={https://doi.org/10.1007/978-3-030-32101-7_12},
+    pdf={https://eprint.iacr.org/2018/1024.pdf},
+    abstract={Cryptocurrencies record transactions between parties in a blockchain maintained by a peer-to-peer network. In most cryptocurrencies, transactions explicitly identify the previous transaction providing the funds they are spending, revealing the amount and sender/recipient pseudonyms. This is a considerable privacy issue. Zerocash resolves this by using zero-knowledge proofs to hide both the source, destination and amount of the transacted funds. To receive payments in Zerocash, however, the recipient must scan the blockchain, testing if each transaction is destined for them. This is not practical for mobile and other bandwidth constrained devices. In this paper, we build ZLiTE, a system that can support the so called “light clients”, which can receive transactions aided by a server equipped with a Trusted Execution Environment. Even with the use of a TEE, this is not a trivial problem. First, we must ensure that server processing the blockchain does not leak sensitive information via side channels. Second, we need to design a bandwidth efficient mechanism for the client to keep an up-to-date version of the witness needed in order to spend the funds they previously received.}
 }
 
 @inproceedings{mccorry2019you,
@@ -55,7 +80,9 @@
     title={{You sank my battleship! A case study to evaluate state channels as a scaling solution for cryptocurrencies}},
     author={McCorry, Patrick and Buckland, Chris and Bakshi, Surya and W{\"u}st, Karl and Miller, Andrew},
     booktitle={FC Workshop on Trusted Smart Contracts},
-    year={2019}
+    year={2019},
+    publication={10.1007/978-3-030-43725-1_4},
+    abstract={Off-chain protocols (or so-called Layer 2) are heralded as a scaling solution for cryptocurrencies. One prominent approach, state channels, allows a group of parties to transact amongst themselves and the global blockchain is only used as a last resort to self-enforce any disputed transactions. To evaluate state channels as a scaling solution, we provide a proof of concept implementation for a two-player battleship game. It fits a category of applications that are not considered reasonable to execute on the blockchain, but it is widely perceived as an ideal application for off-chain protocols. We explore the minimal modifications required to deploy the battleship game as a state channel and propose a new state channel construction, Kitsune, which combines features from existing constructions. While in the optimistic case we demonstrate the battleship game can be played efficiently in a state channel, the requirement for unanimous off-chain agreement introduces new economic and time-based attacks that can render the game as unreasonable to play.}
 }
 
 @inproceedings{wuest2018you,
@@ -63,7 +90,10 @@
     author={W{\"u}st, Karl and Gervais, Arthur},
     booktitle={2018 Crypto Valley Conference on Blockchain Technology}, 
     title={{Do you need a Blockchain?}}, 
-    year={2018}
+    year={2018},
+    publication={10.1109/CVCBT.2018.00011},
+    pdf={https://eprint.iacr.org/2017/375.pdf},
+    abstract={Blockchain is being praised as a technological innovation which allows to revolutionize how society trades and interacts. This reputation is in particular attributable to its properties of allowing mutually mistrusting entities to exchange financial value and interact without relying on a trusted third party. A blockchain moreover provides an integrity protected data storage and allows to provide process transparency. In this paper we critically analyze whether a blockchain is indeed the appropriate technical solution for a particular application scenario. We differentiate between permissionless (e.g., Bitcoin/Ethereum) and permissioned (e.g. Hyperledger/Corda) blockchains and contrast their properties to those of a centrally managed database. We provide a structured methodology to determine the appropriate technical solution to solve a particular application problem. Given our methodology, we analyze in depth three use cases - Supply Chain Management, Interbank and International Payments, and Decentralized Autonomous Organizations and conclude the article with an outlook for further opportunities.}
 }
 
 @inproceedings{ritzdorf2018tls,
@@ -71,7 +101,10 @@
     title={{TLS-N: Non-repudiation over TLS Enabling Ubiquitous Content Signing}},
     author={Ritzdorf, Hubert and W{\"u}st, Karl and Gervais, Arthur and Felley, Guillaume and {\v{C}}apkun, Srdjan},
     booktitle={Network and Distributed System Security Symposium},
-    year={2018}
+    year={2018},
+    publication={https://doi.org/10.14722/ndss.2018.23272},
+    pdf={https://eprint.iacr.org/2017/578.pdf},
+    abstract={An internet user wanting to share observed content is typically restricted to primitive techniques such as screenshots, web caches or share button-like solutions. These acclaimed proofs, however, are either trivial to falsify or require trust in centralized entities (e.g., search engine caches). This motivates the need for a seamless and standardized internet-wide non-repudiation mechanism, allowing users to share data from news sources, social websites or financial data feeds in a provably secure manner. Additionally, blockchain oracles that enable data-rich smart contracts typically rely on a trusted third party (e.g., TLSNotary or Intel SGX). A decentralized method to transfer webbased content into a permissionless blockchain without additional trusted third party would allow for smart contract applications to flourish. In this work, we present TLS-N, the first TLS extension that provides secure non-repudiation and solves both of the mentioned challenges. TLS-N generates non-interactive proofs about the content of a TLS session that can be efficiently verified by third parties and blockchain based smart contracts. As such, TLS-N increases the accountability for content provided on the web and enables a practical and decentralized blockchain oracle for web content. TLS-N is compatible with TLS 1.3 and adds a minor overhead to a typical TLS session. When a proof is generated, parts of the TLS session (e.g., passwords, cookies) can be hidden for privacy reasons, while the remaining content can be verified.}
 }
 
 @inproceedings{wuest2017force,
@@ -79,7 +112,9 @@
     title={{Force Open: Lightweight black box file repair}},
     author={W{\"u}st, Karl and Tsankov, Petar and Radomirovi{\'c}, Sa{\v{s}}a and Dashti, Mohammad Torabi},
     booktitle={{DFRWS Europe}},
-    year={2017}
+    year={2017},
+    publication={https://doi.org/10.1016/j.diin.2017.01.009},
+    abstract={We present a novel approach for automatic repair of corrupted files that applies to any common file format and does not require knowledge of its structure. Our lightweight approach modifies the execution of a file viewer instead of the file data and makes use of instrumentation and execution hijacking, two techniques from software testing. It uses a file viewer as a black box and does not require access to its source code or any knowledge about its inner workings. We present our implementation of this approach and evaluate it on corrupted PNG, JPEG, and PDF files.}
 }
 
 @inproceedings{gervais2016security,
@@ -87,5 +122,10 @@
     title={{On the Security and Performance of Proof of Work Blockchains}},
     author={Gervais, Arthur and Karame, Ghassan O and W{\"u}st, Karl and Glykantzis, Vasileios and Ritzdorf, Hubert and {\v{C}}apkun, Srdjan},
     booktitle={ACM SIGSAC Conference on Computer and Communications Security},
-    year={2016}
+    year={2016},
+    publication={https://doi.org/10.1145/2976749.2978341},
+    pdf={https://eprint.iacr.org/2016/555.pdf},
+    abstract={Proof of Work (PoW) powered blockchains currently account for more than 90\% of the total market capitalization of existing digital cryptocurrencies. Although the security provisions of Bitcoin have been thoroughly analysed, the security guarantees of variant (forked) PoW blockchains (which were instantiated with different parameters) have not received much attention in the literature. This opens the question whether existing security analysis of Bitcoin's PoW applies to other implementations which have been instantiated with different consensus and/or network parameters.
+
+In this paper, we introduce a novel quantitative framework to analyse the security and performance implications of various consensus and network parameters of PoW blockchains. Based on our framework, we devise optimal adversarial strategies for double-spending and selfish mining while taking into account real world constraints such as network propagation, different block sizes, block generation intervals, information propagation mechanism, and the impact of eclipse attacks. Our framework therefore allows us to capture existing PoW-based deployments as well as PoW blockchain variants that are instantiated with different parameters, and to objectively compare the tradeoffs between their performance and security provisions.}
 }

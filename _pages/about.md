@@ -13,8 +13,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons below the picture
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a tenure-track faculty member at [CISPA Helmholtz Center for Information Security](https://cispa.de) since October 2021. Previously, I completed my PhD at ETH Zurich in the [System Security Group](https://syssec.ethz.ch) under the supervision of [Srdjan Capkun](https://syssec.ethz.ch/people/capkun). 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests are broadly in computer security with a particular focus on security and privacy aspects of digital currency and smart contract systems as well as some aspects of trusted computing. In my research, I combine techniques from cryptography, distributed systems, and trusted hardware to build systems that are practical and balance the trade-off between reducing trust assumptions and high performance. For more information about my research, have a look at my recent [publications](/publications). You can also find my publications on my [google scholar profile](https://scholar.google.com/citations?user=F5oUrWAAAAAJ).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am currently looking for PhD students. If you are interested in working with me, get in touch with me and check out [open positions](/positions) for more details.

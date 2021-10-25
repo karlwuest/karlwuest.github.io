@@ -83,7 +83,7 @@
 
     <div class="links">
     {% if entry.abstract %}
-      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
     {% endif %}
     {% if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
@@ -94,13 +94,28 @@
     {% if entry.html %}
       <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
     {% endif %}
+    {% if entry.publication %}
+      {% if entry.publication contains '://' %}
+      <a href="{{ entry.publication }}" class="btn btn-sm z-depth-0" role="button">Publication</a>
+      {% else %}
+      <a href="{{ entry.publication | prepend: 'https://doi.org/' }}" class="btn btn-sm z-depth-0" role="button">Publication</a>
+      {% endif %}
+    {% endif %}
+    {% if entry.publication2 %}
+      {% if entry.publication2 contains '://' %}
+      <a href="{{ entry.publication2 }}" class="btn btn-sm z-depth-0" role="button">Publication</a>
+      {% else %}
+      <a href="{{ entry.publication2 | prepend: 'https://doi.org/' }}" class="btn btn-sm z-depth-0" role="button">Publication</a>
+      {% endif %}
+    {% endif %}
     {% if entry.pdf %}
       {% if entry.pdf contains '://' %}
-      <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+      <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">Preprint</a>
       {% else %}
       <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
       {% endif %}
     {% endif %}
+
     {% if entry.supp %}
       {% if entry.supp contains '://' %}
       <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
