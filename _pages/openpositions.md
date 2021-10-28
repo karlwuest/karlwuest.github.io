@@ -12,7 +12,7 @@ I am looking for talented people with a background in computer science or closel
 My main research focus is on security and privacy aspects of digital currency and smart contract systems as well as some aspects of trustworthy computing. Check out my [publications](/publications) to see some of my recent work. If you are interested in working on similar topics, please get in touch!
 
 I am currently mainly looking for PhD students, but I am also open to applications for PostDocs and can offer fully funded positions for this as well.
-The positions are at the [CISPA Helmholtz Center for Information Security](https://cispa.de), one of the world's [top research institutions in the area of information security](http://csrankings.org/#/index?sec&world). 
+The positions are at the [CISPA Helmholtz Center for Information Security](https://cispa.de), one of the world's [top research institutions in the area of information security](http://csrankings.org/#/index?sec&world). The start dates for the positions are flexible. 
 
 ##### Salary
 
