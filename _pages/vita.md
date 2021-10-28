@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /vitae
-title: vitae
+permalink: /vita
+title: vita
 description: 
 redirect: /assets/pdf/CV.pdf
 nav: true
