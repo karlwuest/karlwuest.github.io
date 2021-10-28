@@ -32,7 +32,7 @@ Please send me your application via [email](mailto:{{ site.email | encode_email 
 
 The application should include:
 * Short (max. 1 page) description of your background and research interests 
-* Curriculum Vitae (incl. list of publications if applicable)
+* CV (incl. list of publications if applicable)
 * Transcripts of records & relevant certificates
 * A short summary of your recent research work (e.g. Master thesis)
 * Optionally, you can include reference letters or a list of references
