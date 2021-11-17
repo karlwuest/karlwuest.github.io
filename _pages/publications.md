@@ -8,6 +8,15 @@ nav: true
 
 <div class="publications">
 
+{%- capture preprintcount -%}
+{%- bibliography_count -f preprints -%}
+{%- endcapture -%}
+
+{% if preprintcount != "0" %}
+<h1>pre-prints</h1>
+  {% bibliography -f preprints %}
+{% endif %}
+
 <h1>peer-reviewed</h1>
 
 {% for y in page.years %}
@@ -15,7 +24,7 @@ nav: true
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}
 
-<h1>tech reports</h1>
+<h1>technical reports</h1>
   {% bibliography -f techreports %}
 </div>
 
