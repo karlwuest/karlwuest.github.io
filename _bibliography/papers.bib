@@ -1,14 +1,34 @@
 ---
 ---
 
+@inproceedings{wuest2025hummingbird,
+    abbr={SIGCOMM},
+    title={Hummingbird: Fast, Flexible, and Fair Inter-Domain Bandwidth Reservations},
+    author={W{\"u}st, Karl and Giuliari, Giacomo and Legner, Markus and Smith, Jean-Pierre and Wyss, Marc and Bachmann, Jules and Garcia-Pardo, Juan A and Perrig, Adrian},
+    year={2025},
+    pdf={https://arxiv.org/pdf/2308.09959},
+    booktitle={ACM SIGCOMM Conference},
+    abstract={
+    To realize the long-standing vision of providing quality-of-service (QoS) guarantees on a public Internet,
+	this paper introduces Hummingbird: a lightweight QoS-system that provides fine-grained inter-domain reservations for end hosts.
+
+	Hummingbird enables flexible and composable reservations with end-to-end guarantees, and addresses an often overlooked, but crucial, aspect of bandwidth-reservation systems: incentivization of network providers.
+	Hummingbird represents bandwidth reservations as tradable assets, allowing markets to emerge. These markets then ensure fair and efficient resource allocation and encourage deployment by remunerating providers.
+	This incentivization is facilitated by decoupling reservations from network identities, which enables novel control-plane mechanisms and allows the design of a control plane based on smart contracts.
+
+	Hummingbird also provides an efficient reservation data plane, which streamlines the processing on routers and thus simplifies the implementation, deployment, and traffic policing, while maintaining robust security properties. Our prototype implementation demonstrates the efficiency and scalability of Hummingbird's asset-based control plane, and our high-speed software implementation can fill a 160 Gbps link with Hummingbird packets on commodity hardware.
+    }
+}
+
 @inproceedings{wuest2022platypus,
 	abbr={CCS},
 	title={Platypus: A Central Bank Digital Currency with Unlinkable Transactions and Privacy Preserving Regulation},
 	author={W{\"u}st, Karl and Kostiainen, Kari and Delius, Noah and Capkun, Srdjan},
 	year={2022},
 	pdf={https://eprint.iacr.org/2021/1443.pdf},
-	booktitle={ACM SIGSAC Conference on Computer and Communications Security (to appear)},
-	abstract={Due to the popularity of blockchain-based cryptocurrencies, the increasing digitalization of payments, and the constantly reducing role of cash in society, central banks have shown an increased interest in deploying central bank digital currencies (CBDCs) that could serve as a digital cash-equivalent. While most recent research on CBDCs focuses on blockchain technology, it is not clear that this choice of technology provides the optimal solution. In particular, the centralized trust model of a CBDC offers opportunities for different designs.
+	booktitle={ACM SIGSAC Conference on Computer and Communications Security},
+	abstract={
+    Due to the popularity of blockchain-based cryptocurrencies, the increasing digitalization of payments, and the constantly reducing role of cash in society, central banks have shown an increased interest in deploying central bank digital currencies (CBDCs) that could serve as a digital cash-equivalent. While most recent research on CBDCs focuses on blockchain technology, it is not clear that this choice of technology provides the optimal solution. In particular, the centralized trust model of a CBDC offers opportunities for different designs.
 	
 	In this paper, we depart from blockchain designs and instead build on ideas from traditional e-cash schemes. We propose a new style of building digital currencies that combines the transaction processing model of e-cash with an account-based fund management model. We argue that such a style of building digital currencies is especially well-suited to CBDCs.
 	We also design the first such digital currency system, called Platypus, that provides strong privacy, high scalability, and expressive but simple regulation, which are all critical features for a CBDC. Platypus achieves these properties by adapting techniques similar to those used in anonymous blockchain cryptocurrencies like Zcash to fit our account model and applying them to the e-cash context.}
