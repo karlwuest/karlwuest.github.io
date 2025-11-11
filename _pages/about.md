@@ -17,4 +17,4 @@ I'm a Staff Researcher and Engineer at [Mysten Labs](https://mystenlabs.com/). B
 
 My research interests are broadly in computer security with a particular focus on digital currencies, decentralized storage, and smart contract systems. My research combines techniques from cryptography, distributed systems, and trusted hardware to build systems that are practical and balance the trade-off between reducing trust assumptions and high performance, while getting strong security and privacy guarantees. For more information about my research, have a look at my [publications](/publications) which you can also find on my [google scholar profile](https://scholar.google.com/citations?user=F5oUrWAAAAAJ).
 
-I am also one of the creators of [Walrus](https://www.walrus.xyz/), a secure decentralized storage system that uses erasure coding to efficiently and securely store files in a decentralized network with byzantine faults.
+I am also one of the creators of the protocol behind [Walrus](https://www.walrus.xyz/), a secure decentralized storage system that uses erasure coding to efficiently and securely store files in a decentralized network with byzantine faults.
