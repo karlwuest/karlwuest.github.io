@@ -1,6 +1,50 @@
 ---
 ---
 
+@inproceedings{danezis2026walrus,
+  abbr={CCS},
+  title={Walrus: An Efficient Decentralized Storage Network},
+  author={Danezis, George and Giuliari, Giacomo and Kogias, Lefteris Kokoris and Legner, Markus and Smith, Jean-Pierre and Sonnino, Alberto and W{\"u}st, Karl},
+  booktitle={(To appear at) ACM Conference on Computer and Communications Security (CCS)},
+  year={2026},
+  pdf={https://arxiv.org/pdf/2505.05370},
+  abstract={
+    Decentralized storage faces a fundamental trade-off between replication overhead, recovery
+    efficiency, and security guarantees. Current approaches either rely on full replication,
+    incurring substantial storage costs, or employ erasure coding schemes that struggle with
+    efficient recovery, especially under high churn. We present Walrus, a decentralized blob
+    storage system that addresses these limitations through multiple technical innovations.
+
+    At the core of Walrus is Red Stuff, a two-dimensional erasure coding protocol that achieves
+    high security with only 4.5x replication factor, while providing self-healing of lost data.
+    This means that recovery is done without centralized coordination and requires bandwidth
+    proportional to the lost data.
+
+    However, Red Stuff on its own is not sufficient for Walrus as it is designed with a static
+    set of participants in mind. To further support decentralization, we also introduce a
+    multi-stage epoch-change protocol that efficiently handles storage node churn while
+    maintaining uninterrupted availability during committee transitions. Our system incorporates
+    authenticated data structures to defend against malicious clients and ensure data consistency
+    throughout storage and retrieval. Walrus has been deployed in production for almost a year
+    and has secured 530 TB of data. We conduct experimental evaluation on the deployed system
+    and demonstrate that Walrus achieves practical performance at scale and outperforms Arweave's
+    deployed blockchain.
+  }
+}
+
+@inproceedings{beer2026payoff,
+  abbr={AsiaCCS},
+  title={Payoff: A regulated central bank digital currency with private offline payments},
+  author={Beer, Carolin and Zingg, Sheila and Kostiainen, Kari and W{\"u}st, Karl and Capkun, Vedran and Capkun, Srdjan},
+  booktitle={(To appear at) ACM Asia Conference on Computer and Communications Security (AsiaCCS)},
+  year={2026},
+  pdf={https://arxiv.org/pdf/2408.06956},
+  abstract={
+  The European Central Bank is preparing for the potential issuance of a central bank digital currency (CBDC), called the digital euro. A recent regulatory proposal by the European Commission defines several requirements for the digital euro, such as support for both online and offline payments. Offline payments are expected to enable cash-like privacy, local payment settlement, and the enforcement of holding limits. While other central banks have expressed similar desired functionality, achieving such offline payments poses a novel technical challenge. We observe that none of the existing research solutions, including offline E-cash schemes, are fully compliant. Proposed solutions based on secure elements offer no guarantees in case of compromise and can therefore lead to significant payment fraud.
+The main contribution of this paper is PayOff, a novel CBDC design motivated by the digital euro regulation, which focuses on offline payments. We analyze the security implications of local payment settlement and identify new security objectives. PayOff protects user privacy, supports complex regulations such as holding limits, and implements safeguards to increase robustness against secure element failure. Our analysis shows that PayOff provides strong privacy and identifies residual leakages that may arise in real-world deployments. Our evaluation shows that offline payments can be fast and that the central bank can handle high payment loads with moderate computing resources. However, the main limitation of PayOff is that offline payment messages and storage requirements grow in the number of payments that the sender makes or receives without going online in between.
+  }
+}
+
 @inproceedings{wuest2025hummingbird,
     abbr={SIGCOMM},
     title={Hummingbird: Fast, Flexible, and Fair Inter-Domain Bandwidth Reservations},
